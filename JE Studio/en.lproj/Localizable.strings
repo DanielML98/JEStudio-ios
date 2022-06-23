@@ -1,0 +1,10 @@
+/* 
+  Localizables.strings
+  JE Studio
+
+  Created by Daniel Martínez on 30/05/22.
+  
+*/
+"profile_icon_label" = "Profile";
+"book_icon_label" = "Book";
+"payments_icon_label" = "Payments";
