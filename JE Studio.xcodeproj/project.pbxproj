@@ -35,6 +35,12 @@
 		3EE27CF6284167B700BFC691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE27CF5284167B700BFC691 /* ContentView.swift */; };
 		3EE27CF8284167B700BFC691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE27CF7284167B700BFC691 /* Assets.xcassets */; };
 		3EE27CFB284167B700BFC691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE27CFA284167B700BFC691 /* Preview Assets.xcassets */; };
+		3EFBE1042874FF50004538D6 /* StudioCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE1032874FF50004538D6 /* StudioCellView.swift */; };
+		3EFBE106287503E1004538D6 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE105287503E1004538D6 /* FontExtension.swift */; };
+		3EFBE10828750983004538D6 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE10728750983004538D6 /* BookView.swift */; };
+		3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE10A28750C1A004538D6 /* Studio.swift */; };
+		3EFBE10D28750CD7004538D6 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE10C28750CD7004538D6 /* BookViewModel.swift */; };
+		3EFBE10F2875453A004538D6 /* WeeklySessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +75,12 @@
 		3EE27CF5284167B700BFC691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3EE27CF7284167B700BFC691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EE27CFA284167B700BFC691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3EFBE1032874FF50004538D6 /* StudioCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCellView.swift; sourceTree = "<group>"; };
+		3EFBE105287503E1004538D6 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		3EFBE10728750983004538D6 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		3EFBE10A28750C1A004538D6 /* Studio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studio.swift; sourceTree = "<group>"; };
+		3EFBE10C28750CD7004538D6 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySessionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 			children = (
 				3ECD73112864DF0600BF9FE2 /* UIColorExtension.swift */,
 				3ECD731F28652C6700BF9FE2 /* String+Localizable.swift */,
+				3EFBE105287503E1004538D6 /* FontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -145,6 +158,8 @@
 		3EE27CF2284167B700BFC691 /* JE Studio */ = {
 			isa = PBXGroup;
 			children = (
+				3EFBE10928750C08004538D6 /* Models */,
+				3EFBE1022874FF30004538D6 /* BookModule */,
 				3ECD73102864C17200BF9FE2 /* JE-Studio-Info.plist */,
 				3EE27CF3284167B700BFC691 /* JE_StudioApp.swift */,
 				3ECD7315286526D900BF9FE2 /* JEConstants.swift */,
@@ -164,6 +179,25 @@
 				3EE27CFA284167B700BFC691 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3EFBE1022874FF30004538D6 /* BookModule */ = {
+			isa = PBXGroup;
+			children = (
+				3EFBE1032874FF50004538D6 /* StudioCellView.swift */,
+				3EFBE10728750983004538D6 /* BookView.swift */,
+				3EFBE10C28750CD7004538D6 /* BookViewModel.swift */,
+				3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */,
+			);
+			path = BookModule;
+			sourceTree = "<group>";
+		};
+		3EFBE10928750C08004538D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3EFBE10A28750C1A004538D6 /* Studio.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,12 +291,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ECD732028652C6700BF9FE2 /* String+Localizable.swift in Sources */,
+				3EFBE10F2875453A004538D6 /* WeeklySessionsView.swift in Sources */,
 				3EE27CF6284167B700BFC691 /* ContentView.swift in Sources */,
+				3EFBE1042874FF50004538D6 /* StudioCellView.swift in Sources */,
 				3ECD7316286526D900BF9FE2 /* JEConstants.swift in Sources */,
 				3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */,
+				3EFBE10D28750CD7004538D6 /* BookViewModel.swift in Sources */,
 				3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */,
+				3EFBE106287503E1004538D6 /* FontExtension.swift in Sources */,
 				3ECD73122864DF0600BF9FE2 /* UIColorExtension.swift in Sources */,
+				3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */,
 				3ECD73142865109200BF9FE2 /* ViewRouter.swift in Sources */,
+				3EFBE10828750983004538D6 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

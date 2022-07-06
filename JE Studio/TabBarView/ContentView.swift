@@ -20,7 +20,7 @@ struct ContentView: View {
           case .profile:
               Text("Profile")
           case .book:
-              Text("Book")
+              BookView(viewModel: BookViewModel())
           case .payments:
               Text("Payments")
           }
