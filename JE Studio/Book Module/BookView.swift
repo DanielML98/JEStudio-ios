@@ -20,7 +20,7 @@ struct BookView: View {
           } label: {
             EmptyView()
           }
-          Text("Studios")
+          Text(viewModel.viewTitle)
             .foregroundColor(JEStudioColor.purple700)
             .font(.jeHeader2)
             .overlay {
