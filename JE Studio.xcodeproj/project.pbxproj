@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0EBB7C2877F103008F681A /* WeeklySessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */; };
 		3E3FD64A2876729F0012DB58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD6492876729F0012DB58 /* FirebaseAuth */; };
 		3E3FD64C2876729F0012DB58 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD64B2876729F0012DB58 /* FirebaseAuthCombine-Community */; };
 		3E3FD64E2876729F0012DB58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD64D2876729F0012DB58 /* FirebaseDatabase */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySessionsCell.swift; sourceTree = "<group>"; };
 		3E3FD65E28767C480012DB58 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3E3FD66028767C930012DB58 /* AuthLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalizables.swift; sourceTree = "<group>"; };
 		3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E0EBB7A2877EF31008F681A /* Weekly Sessions Module */ = {
+			isa = PBXGroup;
+			children = (
+				3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */,
+				3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */,
+			);
+			path = "Weekly Sessions Module";
+			sourceTree = "<group>";
+		};
 		3E3FD65B28767C1D0012DB58 /* Auth Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +219,7 @@
 		3EE27CF2284167B700BFC691 /* JE Studio */ = {
 			isa = PBXGroup;
 			children = (
+				3E0EBB7A2877EF31008F681A /* Weekly Sessions Module */,
 				3E3FD65B28767C1D0012DB58 /* Auth Module */,
 				3EDDAB6C287668BB003F175B /* Data Manager */,
 				3EFBE1022874FF30004538D6 /* Book Module */,
@@ -235,7 +247,6 @@
 				3EFBE1032874FF50004538D6 /* StudioCellView.swift */,
 				3EFBE10728750983004538D6 /* BookView.swift */,
 				3EFBE10C28750CD7004538D6 /* BookViewModel.swift */,
-				3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */,
 				3EDDAB6928766633003F175B /* BookLocalizables.swift */,
 			);
 			path = "Book Module";
@@ -361,6 +372,7 @@
 				3EFBE1042874FF50004538D6 /* StudioCellView.swift in Sources */,
 				3ECD7316286526D900BF9FE2 /* JEConstants.swift in Sources */,
 				3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */,
+				3E0EBB7C2877F103008F681A /* WeeklySessionsCell.swift in Sources */,
 				3EFBE10D28750CD7004538D6 /* BookViewModel.swift in Sources */,
 				3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */,
 				3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */,
