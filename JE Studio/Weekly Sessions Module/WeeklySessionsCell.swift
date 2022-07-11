@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct WeeklySessionsCell: View {
+  let sessionHour: String
+  let availability: String
+  let coach: String
+
   var body: some View {
     HStack {
       VStack(alignment: .leading) {
-        Text("7:00-8:00")
+        Text(sessionHour)
           .font(.jeHeader4)
           .foregroundColor(JEStudioColor.purple700)
-        Text("Capacidad:bicicletas")
+        Text("\(availability) bikes free")
           .font(.jeBody2)
           .foregroundColor(JEStudioColor.purple500)
       }
@@ -28,7 +32,7 @@ struct WeeklySessionsCell: View {
           .frame(width: 50, height: 50, alignment: .center)
           .foregroundColor(JEStudioColor.purple300)
           .cornerRadius(8)
-        Text("Laura")
+        Text(coach)
           .font(.jeSubtitle1)
       }
       Spacer()
@@ -37,7 +41,6 @@ struct WeeklySessionsCell: View {
         .aspectRatio(contentMode: .fit)
         .frame(width: 35, height: 35, alignment: .center)
         .foregroundColor(JEStudioColor.purple500)
-        .cornerRadius(8)
     }
     .padding()
   }
@@ -45,6 +48,6 @@ struct WeeklySessionsCell: View {
 
 struct WeeklySessionsCell_Previews: PreviewProvider {
   static var previews: some View {
-    WeeklySessionsCell()
+    WeeklySessionsCell(sessionHour: "7:00", availability: "2", coach: "Laura")
   }
 }

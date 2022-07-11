@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StudioCellView: View {
   
-  var studioName: String = "Universidad 54"
+  var studioName: String = "Universidad"
   var capacity: String = "7"
   
     var body: some View {
@@ -28,7 +28,10 @@ struct StudioCellView: View {
             .font(.jeSubtitle1)
             .foregroundColor(JEStudioColor.purple500)
         }
+        Spacer()
       }
+      .padding(.horizontal)
+      .frame(maxWidth: .infinity)
     }
 }
 

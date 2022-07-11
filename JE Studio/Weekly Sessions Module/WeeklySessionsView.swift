@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct WeeklySessionsView: View {
+  
+  @ObservedObject var viewModel: WeeklySessionsViewModel
+  
     var body: some View {
-        Text("Weekly Sessions")
+      ScrollView {
+        ForEach(viewModel.availableSessions) { session in
+          WeeklySessionsCell(sessionHour: session.hour,
+                             availability: session.id,
+                             coach: session.coach)
+        }
+      }
+      .addJENavBar(with: "Available Sessions")
     }
 }
 
 struct WeeklySessionsView_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklySessionsView()
+      WeeklySessionsView(viewModel: WeeklySessionsViewModel(for: .universidad))
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3E0EBB7C2877F103008F681A /* WeeklySessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */; };
+		3E2410EC287A926C007A9ACD /* JENavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2410EB287A926C007A9ACD /* JENavigationBar.swift */; };
+		3E2410EE287A97AC007A9ACD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2410ED287A97AC007A9ACD /* DataManager.swift */; };
+		3E2410F0287B4CCC007A9ACD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2410EF287B4CCC007A9ACD /* Session.swift */; };
+		3E2410F2287B6257007A9ACD /* WeeklySessionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2410F1287B6257007A9ACD /* WeeklySessionsViewModel.swift */; };
 		3E3FD64A2876729F0012DB58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD6492876729F0012DB58 /* FirebaseAuth */; };
 		3E3FD64C2876729F0012DB58 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD64B2876729F0012DB58 /* FirebaseAuthCombine-Community */; };
 		3E3FD64E2876729F0012DB58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3FD64D2876729F0012DB58 /* FirebaseDatabase */; };
@@ -20,6 +24,7 @@
 		3E3FD65F28767C480012DB58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD65E28767C480012DB58 /* LoginView.swift */; };
 		3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66028767C930012DB58 /* AuthLocalizables.swift */; };
 		3E3FD66328767E1C0012DB58 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */; };
+		3EA2606328790FA100528C04 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2606228790FA100528C04 /* SignUpView.swift */; };
 		3ECD72FE2864BD3F00BF9FE2 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */; };
 		3ECD72FF2864BD3F00BF9FE2 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */; };
 		3ECD73002864BD3F00BF9FE2 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72EE2864BD3F00BF9FE2 /* Montserrat-BlackItalic.ttf */; };
@@ -60,9 +65,14 @@
 
 /* Begin PBXFileReference section */
 		3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySessionsCell.swift; sourceTree = "<group>"; };
+		3E2410EB287A926C007A9ACD /* JENavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JENavigationBar.swift; sourceTree = "<group>"; };
+		3E2410ED287A97AC007A9ACD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3E2410EF287B4CCC007A9ACD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		3E2410F1287B6257007A9ACD /* WeeklySessionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySessionsViewModel.swift; sourceTree = "<group>"; };
 		3E3FD65E28767C480012DB58 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3E3FD66028767C930012DB58 /* AuthLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalizables.swift; sourceTree = "<group>"; };
 		3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3EA2606228790FA100528C04 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		3ECD72EE2864BD3F00BF9FE2 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -129,6 +139,7 @@
 			children = (
 				3EFBE10E2875453A004538D6 /* WeeklySessionsView.swift */,
 				3E0EBB7B2877F103008F681A /* WeeklySessionsCell.swift */,
+				3E2410F1287B6257007A9ACD /* WeeklySessionsViewModel.swift */,
 			);
 			path = "Weekly Sessions Module";
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 				3E3FD65E28767C480012DB58 /* LoginView.swift */,
 				3E3FD66028767C930012DB58 /* AuthLocalizables.swift */,
 				3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */,
+				3EA2606228790FA100528C04 /* SignUpView.swift */,
 			);
 			path = "Auth Module";
 			sourceTree = "<group>";
@@ -184,6 +196,7 @@
 				3ECD73112864DF0600BF9FE2 /* UIColorExtension.swift */,
 				3ECD731F28652C6700BF9FE2 /* String+Localizable.swift */,
 				3EFBE105287503E1004538D6 /* FontExtension.swift */,
+				3E2410EB287A926C007A9ACD /* JENavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 				3ECD72EB2864BD1C00BF9FE2 /* Fonts */,
 				3EE27CF9284167B700BFC691 /* Preview Content */,
 				3ECD731D28652B1000BF9FE2 /* Localizable.strings */,
+				3E2410ED287A97AC007A9ACD /* DataManager.swift */,
 			);
 			path = "JE Studio";
 			sourceTree = "<group>";
@@ -256,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				3EFBE10A28750C1A004538D6 /* Studio.swift */,
+				3E2410EF287B4CCC007A9ACD /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,16 +385,21 @@
 				3EE27CF6284167B700BFC691 /* ContentView.swift in Sources */,
 				3E3FD65F28767C480012DB58 /* LoginView.swift in Sources */,
 				3EFBE1042874FF50004538D6 /* StudioCellView.swift in Sources */,
+				3EA2606328790FA100528C04 /* SignUpView.swift in Sources */,
 				3ECD7316286526D900BF9FE2 /* JEConstants.swift in Sources */,
 				3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */,
 				3E0EBB7C2877F103008F681A /* WeeklySessionsCell.swift in Sources */,
 				3EFBE10D28750CD7004538D6 /* BookViewModel.swift in Sources */,
+				3E2410EE287A97AC007A9ACD /* DataManager.swift in Sources */,
 				3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */,
 				3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */,
+				3E2410F2287B6257007A9ACD /* WeeklySessionsViewModel.swift in Sources */,
+				3E2410EC287A926C007A9ACD /* JENavigationBar.swift in Sources */,
 				3E3FD66328767E1C0012DB58 /* LoginViewModel.swift in Sources */,
 				3EFBE106287503E1004538D6 /* FontExtension.swift in Sources */,
 				3EDDAB6A28766633003F175B /* BookLocalizables.swift in Sources */,
 				3ECD73122864DF0600BF9FE2 /* UIColorExtension.swift in Sources */,
+				3E2410F0287B4CCC007A9ACD /* Session.swift in Sources */,
 				3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */,
 				3ECD73142865109200BF9FE2 /* ViewRouter.swift in Sources */,
 				3EFBE10828750983004538D6 /* BookView.swift in Sources */,
@@ -532,6 +552,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,7 +564,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -562,6 +583,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -573,7 +595,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

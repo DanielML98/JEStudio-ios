@@ -9,20 +9,21 @@ import SwiftUI
 
 struct BookView: View {
   @ObservedObject var viewModel: BookViewModel
-  @State var selectedStudio: Studio = Studio(name: "Universidad 54", capacity: "7")
+  @State var selectedStudio: SpinningStudio = .universidad
   @State var navigationAction: Int? = 0
   
     var body: some View {
       NavigationView {
         VStack (alignment: .leading) {
           NavigationLink(tag: 1, selection: $navigationAction) {
-            WeeklySessionsView()
+            WeeklySessionsView(viewModel: WeeklySessionsViewModel(for: selectedStudio))
           } label: {
             EmptyView()
           }
           Text(viewModel.viewTitle)
             .foregroundColor(JEStudioColor.purple700)
             .font(.jeHeader2)
+            .padding()
             .overlay {
               Rectangle()
                 .fill(JEStudioColor.purple300)
@@ -32,13 +33,14 @@ struct BookView: View {
           ForEach(viewModel.studios) { studio in
             StudioCellView(studioName: studio.name, capacity: studio.capacity)
               .onTapGesture {
-                self.selectedStudio = studio
+                self.selectedStudio = studio.getStudio()
                 self.navigationAction = 1
               }
           }
           Spacer()
         }
         .navigationBarHidden(true)
+        .frame(maxWidth: .infinity)
       }
     }
 }

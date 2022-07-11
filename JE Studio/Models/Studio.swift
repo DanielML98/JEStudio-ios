@@ -13,4 +13,12 @@ struct Studio: Identifiable {
   }
   let name: String
   let capacity: String
+
+  func getStudio() -> SpinningStudio {
+    if let spinningStudio = SpinningStudio(rawValue: self.name.lowercased()) {
+      return spinningStudio
+    } else {
+      return .universidad
+    }
+  }
 }

@@ -11,6 +11,7 @@ struct ContentView: View {
   
   private let localizables: TabBarLocalizables = TabBarLocalizables()
   @StateObject var viewRouter: ViewRouter
+  @State var isLoggedIn: Bool
 
     var body: some View {
       GeometryReader { geometry in
@@ -50,6 +51,9 @@ struct ContentView: View {
           .background(JEStudioColor.purple500)
         }
       }
+      .fullScreenCover(isPresented: $isLoggedIn) {
+        LoginView(viewModel: LoginViewModel())
+      }
     }
 }
 
@@ -79,7 +83,7 @@ struct TabBarIcon: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewRouter: ViewRouter())
+      ContentView(viewRouter: ViewRouter(), isLoggedIn: true)
     }
 }
 
