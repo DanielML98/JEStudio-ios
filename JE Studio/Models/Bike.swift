@@ -13,4 +13,5 @@ struct Bike: Identifiable {
   }
   let bikeNumber: Int
   let isTaken: Bool
+  var isSelected: Bool
 }

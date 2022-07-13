@@ -14,14 +14,18 @@ struct BikeGridView: View {
     HStack(spacing: 64) {
       VStack {
         ForEach(viewModel.backRow) { bike in
-          bikeButton
-            .foregroundColor(bike.isTaken ? Color.red : Color.black)
+          BikeButton(viewModel: self.viewModel,
+                     bikeNumber: bike.bikeNumber,
+                     isTaken: bike.isTaken,
+                     isSelected: bike.isSelected)
         }
       }
       VStack {
         ForEach(viewModel.frontRow) { bike in
-          bikeButton
-            .foregroundColor(bike.isTaken ? Color.red : Color.black)
+          BikeButton(viewModel: self.viewModel,
+                     bikeNumber: bike.bikeNumber,
+                     isTaken: bike.isTaken,
+                     isSelected: bike.isSelected)
         }
       }
       Text("Mirror")
@@ -31,16 +35,30 @@ struct BikeGridView: View {
           .font(.jeHeader3)
     }
   }
-}
-
-var bikeButton: some View {
-  Button {
-    print("Hola Mundo")
-  } label: {
-    Image("spinning.bike")
-      .renderingMode(.template)
-      .resizable()
-      .frame(width: 50, height: 50)
+  
+  struct BikeButton: View {
+    let viewModel: BikeGridViewModel
+    let bikeNumber: Int
+    let isTaken: Bool
+    let isSelected: Bool
+    
+    var body: some View {
+      Button {
+        viewModel.selectBike(bikeNumber)
+      } label: {
+        Image("spinning.bike")
+          .renderingMode(.template)
+          .resizable()
+          .foregroundColor(getBikeColor())
+          .frame(width: 50, height: 50)
+      }
+      .allowsHitTesting(!isTaken)
+    }
+    
+    func getBikeColor() -> Color {
+      guard !isSelected else { return JEStudioColor.purple600 }
+      return isTaken ? Color.red : Color.black
+    }
   }
 }
 
