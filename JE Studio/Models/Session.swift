@@ -25,4 +25,8 @@ struct Session: Codable, Identifiable {
     formatter.dateFormat = JEConstants.dateFormat
     return formatter.date(from: self.date)?.formatted(date: .complete, time: .omitted) ?? "17/03/1998"
   }
+  
+  static func emptySession() -> Session {
+    Session(studio: "", coach: "", date: "", hour: "", participants: ["":0])
+  }
 }

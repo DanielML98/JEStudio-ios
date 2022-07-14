@@ -17,3 +17,7 @@
 
 // MARK: - Bike Grid Component
 "mirror_label" = "Luna";
+
+// MARK: - Bike Selection Module
+"choose_your_bike_label" = "Elija su bicicleta";
+"confirm_button_label" = "Confirmar";  

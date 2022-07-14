@@ -14,6 +14,7 @@ final class BikeGridViewModel: ObservableObject {
   @Published var frontRow: [Bike] = []
   @Published var backRow: [Bike] = []
   var selectedBikeNumber: Int = Int.zero
+  var delegate: BikeGridDelegate?
 
   init(participants model: [String:Int]) {
     self.bikeSpots = model
@@ -34,5 +35,10 @@ final class BikeGridViewModel: ObservableObject {
     backRow = []
     selectedBikeNumber = bikeNumber
     populateRows(selectedBike: bikeNumber)
+    delegate?.didSelectBike(number: bikeNumber)
   }
+}
+
+protocol BikeGridDelegate {
+  func didSelectBike(number: Int)
 }
