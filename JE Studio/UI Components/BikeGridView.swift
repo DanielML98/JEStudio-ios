@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BikeGridView: View {
-  let data: [Int] = Array(0...3)
   @ObservedObject var viewModel: BikeGridViewModel
   var body: some View {
     HStack(spacing: 64) {
@@ -28,7 +27,7 @@ struct BikeGridView: View {
                      isSelected: bike.isSelected)
         }
       }
-      Text("Mirror")
+      Text(BikeSelectionLocalizables.mirrorLabel)
           .rotationEffect(.degrees(90))
           .fixedSize()
           .frame(width: 20, height: 180)

@@ -19,4 +19,10 @@ struct Session: Codable, Identifiable {
   let date: String
   let hour: String
   let participants: [String:Int]
+
+  func getFormattedDate() -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = JEConstants.dateFormat
+    return formatter.date(from: self.date)?.formatted(date: .complete, time: .omitted) ?? "17/03/1998"
+  }
 }

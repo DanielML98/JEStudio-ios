@@ -22,8 +22,8 @@ struct JE_StudioApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   var body: some Scene {
     WindowGroup {
-      BikeGridView(viewModel: BikeGridViewModel(participants: ["Daniel":5, "daniel": 6, "daniel2": 7]))
-      //ContentView(viewRouter: ViewRouter(), isLoggedIn: userIsLogged())
+      //BikeGridView(viewModel: BikeGridViewModel(participants: ["Daniel":5, "daniel": 6, "daniel2": 7]))
+      ContentView(viewRouter: ViewRouter(), isLoggedIn: userIsLogged())
       //LoginView(viewModel: LoginViewModel())
     }
   }

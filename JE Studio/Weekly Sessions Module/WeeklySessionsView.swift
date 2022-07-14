@@ -10,16 +10,17 @@ import SwiftUI
 struct WeeklySessionsView: View {
   
   @ObservedObject var viewModel: WeeklySessionsViewModel
+  let localizables = WeeklySessionsLocalizables()
   
     var body: some View {
       ScrollView {
         ForEach(viewModel.availableSessions) { session in
           WeeklySessionsCell(sessionHour: session.hour,
-                             availability: session.id,
+                             date: session.getFormattedDate(),
                              coach: session.coach)
         }
       }
-      .addJENavBar(with: "Available Sessions")
+      .addJENavBar(with: localizables.navBarTitle)
     }
 }
 

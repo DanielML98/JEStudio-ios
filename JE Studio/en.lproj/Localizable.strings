@@ -5,7 +5,15 @@
   Created by Daniel Martínez on 30/05/22.
   
 */
+
+// MARK: - Tab Bar View
 "profile_icon_label" = "Profile";
 "book_icon_label" = "Book";
 "payments_icon_label" = "Payments";
 "studios_label" = "Studios";
+
+// MARK: - Weekly Sessions Module
+"weekly_sessions_nav_bar_title" = "Available Sessions";
+
+// MARK: - Bike Grid Component
+"mirror_label" = "Mirror";

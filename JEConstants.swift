@@ -16,4 +16,5 @@ struct JEConstants {
   static var mainTabBarHeight: CGFloat { 10 }
   static var mainTabBarIconPadding: CGFloat { 10 }
   static var tabBarIconHeightRatio: CGFloat { 28 }
+  static var dateFormat: String { "dd/MM/yyy" }
 }

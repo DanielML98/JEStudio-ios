@@ -22,6 +22,4 @@ final class WeeklySessionsViewModel: ObservableObject {
       }
     }
   }
-  
-  
 }
