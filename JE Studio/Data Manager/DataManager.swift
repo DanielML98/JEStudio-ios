@@ -9,12 +9,12 @@ import Foundation
 import FirebaseDatabase
 
 class DataManager {
-  var ref: DatabaseReference!
+  var database: DatabaseReference!
   init() {
-    ref = Database.database().reference()
+    database = Database.database().reference()
   }
   func getSessions(for studio: SpinningStudio, completion: @escaping (Result<[Session], Error>) -> Void) {
-    ref.child(studio.rawValue).getData { error, data in
+    database.child(studio.rawValue).getData { error, data in
       guard let sessions = data?.value as? [String : Any] else { return }
       do {
         let data =  try JSONSerialization.data(withJSONObject: sessions, options: .prettyPrinted)
@@ -24,6 +24,18 @@ class DataManager {
       } catch {
         completion(.failure(error))
       }
+    }
+  }
+
+  func bookPlaceIn(session: Session, updatedParticipants: [String:Int]) {
+    database.child(session.studio).child(session.id).child("participants").setValue(updatedParticipants) { error, data in
+      guard error == nil
+      else {
+        print("❌Error: \(String(describing: error))")
+        return
+      }
+      print("✅Successfully booked \(session.id) \(updatedParticipants)")
+      print("\(data.url)")
     }
   }
 }

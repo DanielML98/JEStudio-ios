@@ -12,30 +12,32 @@ struct BikeSelectionView: View {
   @ObservedObject var viewModel: BikeSelectionViewModel
   
   var body: some View {
-    VStack {
-      Text(BikeSelectionLocalizables.viewTitle)
-        .font(.jeHeader4)
-        .foregroundColor(JEStudioColor.purple600)
-      SessionInfoCell(studio: viewModel.currentSession.studio.uppercased(),
-                      date: viewModel.currentSession.getFormattedDate(),
-                      hour: viewModel.currentSession.hour,
-                      coach: viewModel.currentSession.coach)
-      BikeGridView(viewModel: viewModel.getGridViewModel())
-      Text("You've chosen \(viewModel.selectedBikeNumber)")
-        .isHidden(viewModel.selectedBikeNumber == Int.zero)
-        .font(.jeHeader5)
-      Button(BikeSelectionLocalizables.confirmButtonLable) {
-        print("Hola")
+    ScrollView {
+      VStack {
+        Text(BikeSelectionLocalizables.viewTitle)
+          .font(.jeHeader4)
+          .foregroundColor(JEStudioColor.purple600)
+        SessionInfoCell(studio: viewModel.currentSession.studio.uppercased(),
+                        date: viewModel.currentSession.getFormattedDate(),
+                        hour: viewModel.currentSession.hour,
+                        coach: viewModel.currentSession.coach)
+        BikeGridView(viewModel: viewModel.getGridViewModel())
+        Text("You've chosen bike \(viewModel.selectedBikeNumber)")
+          .isHidden(viewModel.selectedBikeNumber == Int.zero)
+          .font(.jeHeader5)
+        Button(BikeSelectionLocalizables.confirmButtonLable) {
+          viewModel.bookPlaceIn()
+        }
+        .padding()
+        .allowsHitTesting(viewModel.selectedBikeNumber != Int.zero)
+        .foregroundColor(viewModel.selectedBikeNumber != Int.zero ?  JEStudioColor.purple100 : .init(UIColor.systemGray3))
+        .background(viewModel.selectedBikeNumber != Int.zero ?  JEStudioColor.purple500 : .init(UIColor.systemGray2))
+        .font(.jeHeader6)
+        .cornerRadius(8)
+        Spacer()
       }
-      .padding()
-      .allowsHitTesting(viewModel.selectedBikeNumber != Int.zero)
-      .foregroundColor(JEStudioColor.purple100)
-      .background(JEStudioColor.purple500)
-      .font(.jeHeader6)
-      .cornerRadius(8)
-      Spacer()
+      .addJENavBar(with: String())
     }
-    .addJENavBar(with: String())
   }
 }
 

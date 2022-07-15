@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Firebase
-import FirebaseAuth
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -29,6 +28,6 @@ struct JE_StudioApp: App {
   }
   
   private func userIsLogged() -> Bool {
-    return Auth.auth().currentUser != nil ? false : true
+    return AuthenticationManager.getCurrentUser() != nil ? false : true
   }
 }

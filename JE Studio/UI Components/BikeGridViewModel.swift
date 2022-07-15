@@ -16,12 +16,12 @@ final class BikeGridViewModel: ObservableObject {
   var selectedBikeNumber: Int = Int.zero
   var delegate: BikeGridDelegate?
 
-  init(participants model: [String:Int]) {
+  init(participants model: [String:Int], selectedBike: Int) {
     self.bikeSpots = model
-    populateRows()
+    populateRows(selectedBike: selectedBike)
   }
 
-  private func populateRows(selectedBike: Int = Int.zero) {
+  private func populateRows(selectedBike: Int) {
     for bikeNumber in 1...4  {
       frontRow.append(Bike(bikeNumber: bikeNumber, isTaken: bikeSpots.values.contains(bikeNumber), isSelected: bikeNumber == selectedBike))
     }

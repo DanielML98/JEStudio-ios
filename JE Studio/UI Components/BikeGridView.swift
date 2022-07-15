@@ -21,7 +21,7 @@ struct BikeGridView: View {
       }
       VStack {
         ForEach(viewModel.frontRow) { bike in
-          BikeButton(viewModel: self.viewModel,
+           BikeButton(viewModel: self.viewModel,
                      bikeNumber: bike.bikeNumber,
                      isTaken: bike.isTaken,
                      isSelected: bike.isSelected)
@@ -63,6 +63,6 @@ struct BikeGridView: View {
 
 struct BikeGridView_Previews: PreviewProvider {
   static var previews: some View {
-    BikeGridView(viewModel: BikeGridViewModel(participants: ["Daniel":1, "daniel": 6, "daniel2": 8]))
+    BikeGridView(viewModel: BikeGridViewModel(participants: ["Daniel":1, "daniel": 6, "daniel2": 8], selectedBike: 3))
   }
 }
