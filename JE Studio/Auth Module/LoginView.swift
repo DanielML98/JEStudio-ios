@@ -23,14 +23,14 @@ struct LoginView: View {
           EmptyView()
         }
         VStack {
-          Text("Please login")
+          Text(viewModel.loginPrompt)
             .font(.jeHeader2)
             .foregroundColor(JEStudioColor.purple700)
           HStack {
-            Text("Or if you dont have an account")
+            Text(viewModel.notRegisteredPrompt)
               .font(.jeBody1)
               .lineLimit(1)
-            Button("Sign up") {
+            Button(viewModel.signUpLabel) {
               navigationAction = 1
             }
             .foregroundColor(JEStudioColor.purple600)
@@ -39,14 +39,14 @@ struct LoginView: View {
           }
           .padding()
           VStack {
-            TextField("email", text: $username)
+            TextField(viewModel.emailPlaceholder, text: $username)
               .autocapitalization(.none)
               .disableAutocorrection(true)
               .textFieldStyle(.roundedBorder)
               .font(.jeHeader5)
               .foregroundColor(JEStudioColor.purple700)
               .padding(.bottom, 8)
-            SecureField("Password", text: $password)
+            SecureField(viewModel.passwordPlaceholder, text: $password)
               .textInputAutocapitalization(.never)
               .textFieldStyle(.roundedBorder)
               .foregroundColor(JEStudioColor.purple700)
@@ -55,7 +55,7 @@ struct LoginView: View {
           }
           .padding(.horizontal, 8)
           Spacer()
-          Button("Sign in") {
+          Button(viewModel.signInLabel) {
             viewModel.checkCredentials(email: username, password: password) {
               dismiss()
             }
@@ -70,7 +70,7 @@ struct LoginView: View {
       .alert(isPresented: $viewModel.shouldShowAlert, error: viewModel.error, actions: { _ in
         EmptyView()
       }) { error in
-        Text(error.failureReason ?? "")
+        Text(error.failureReason ?? String())
       }
       .navigationBarHidden(true)
     }

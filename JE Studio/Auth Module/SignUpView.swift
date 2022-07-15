@@ -21,11 +21,11 @@ struct SignUpView: View {
     ZStack {
       VStack {
         HStack {
-          Text("Or if you dont have an account")
+          Text(viewModel.existingAccountTip)
             .font(.jeBody1)
             .lineLimit(1)
-          Button("Sign up") {
-            print("Hola")
+          Button(viewModel.signInLabel) {
+            presentationMode.wrappedValue.dismiss()
           }
           .foregroundColor(JEStudioColor.purple600)
           .cornerRadius(8)
@@ -34,7 +34,7 @@ struct SignUpView: View {
         .padding()
         ScrollView {
           VStack {
-            TextField("Nombre", text: $name, onCommit: {
+            TextField(viewModel.namePlaceholder, text: $name, onCommit: {
               viewModel.checkForEmptyField(name)
             })
               .disableAutocorrection(true)
@@ -42,7 +42,7 @@ struct SignUpView: View {
               .font(.jeHeader5)
               .foregroundColor(JEStudioColor.purple700)
               .padding(.bottom, 8)
-            TextField("Apellido", text: $lastName, onCommit: {
+            TextField(viewModel.lastNamePlaceholder, text: $lastName, onCommit: {
               viewModel.checkForEmptyField(lastName)
             })
               .disableAutocorrection(true)
@@ -50,7 +50,7 @@ struct SignUpView: View {
               .font(.jeHeader5)
               .foregroundColor(JEStudioColor.purple700)
               .padding(.bottom, 8)
-            TextField("email", text: $email, onCommit: {
+            TextField(viewModel.emailPlaceholder, text: $email, onCommit: {
               viewModel.checkForEmptyField(email)
             })
               .autocapitalization(.none)
@@ -59,7 +59,7 @@ struct SignUpView: View {
               .font(.jeHeader5)
               .foregroundColor(JEStudioColor.purple700)
               .padding(.bottom, 8)
-            SecureField("Password", text: $password, onCommit: {
+            SecureField(viewModel.passwordPlaceholder, text: $password, onCommit: {
               viewModel.checkForEmptyField(password)
             })
               .textInputAutocapitalization(.never)
@@ -67,7 +67,7 @@ struct SignUpView: View {
               .foregroundColor(JEStudioColor.purple700)
               .font(.jeHeader5)
               .padding(.top, 8)
-            SecureField("Confirm Password", text: $passwordConfirmation, onCommit: {
+            SecureField(viewModel.passwordConfirmationPlaceholder, text: $passwordConfirmation, onCommit: {
               viewModel.checkForEmptyField(passwordConfirmation)
             })
               .textInputAutocapitalization(.never)
@@ -79,7 +79,7 @@ struct SignUpView: View {
         }
         .padding(.horizontal, 8)
         Spacer()
-        Button("Sign Up") {
+        Button(viewModel.signUpLabel) {
           viewModel.checkForm(name,
                               lastName,
                               email,
@@ -93,11 +93,11 @@ struct SignUpView: View {
         .font(.jeHeader5)
       }
     }
-    .addJENavBar(with: "Please Sign Up")
+    .addJENavBar(with: viewModel.viewTitle)
     .alert(isPresented: $viewModel.shoulShowAlert, error: viewModel.error, actions: { error in
-      Text("Retry")
+      Text(String())
     }) { error in
-      Text(error.failureReason ?? "")
+      Text(error.failureReason ?? String())
     }
   }
 }

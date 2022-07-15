@@ -7,8 +7,18 @@
 
 import Foundation
 import SwiftUI
+typealias Strings = AuthLocalizables
 
 final class SignUpViewModel: ObservableObject {
+  var signInLabel: String { Strings.signInLabel }
+  var signUpLabel: String { Strings.signUpLabel }
+  var existingAccountTip: String { Strings.existingAccountDisclaimer }
+  var namePlaceholder: String { Strings.namePlaceholder }
+  var lastNamePlaceholder: String { Strings.lastNamePlaceholder }
+  var passwordPlaceholder: String { Strings.passwordPlaceholder }
+  var emailPlaceholder: String { Strings.emailPlaceholder }
+  var passwordConfirmationPlaceholder: String { Strings.passwordConfirmationPlaceholder }
+  var viewTitle: String { Strings.signUpTitle }
   @Published var shoulShowAlert: Bool = false
   @Published var error: SignUpErrors = .passwordMismatch
   var isLoggedIn: Binding<Bool>
@@ -82,22 +92,22 @@ enum SignUpErrors: LocalizedError {
   var errorDescription: String? {
     switch self {
     case .passwordMismatch:
-      return "Password Mismatch"
+      return Strings.passwordMismatchDescription
     case .emptyFields:
-      return "Empty Fields"
+      return Strings.emptyFieldsDescription
     case .passwordNotSafe:
-      return "Password is not safe"
+      return Strings.weakPasswordDescription
     }
   }
   /// A localized message describing the reason for the failure.
   var failureReason: String? {
     switch self {
     case .passwordMismatch:
-      return "Your passwords don't match"
+      return Strings.passwordMismatchMessage
     case .emptyFields:
-      return "Please fill in missing fields"
+      return Strings.emptyFieldsMessage
     case .passwordNotSafe:
-      return "Your password must be 8 characters long, contain a capital letter and a digit"
+      return Strings.passwordGuidelines
     }
   }
 }

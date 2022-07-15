@@ -12,6 +12,26 @@
 "payments_icon_label" = "Pagos";
 "studios_label" = "Studios";
 
+// MARK: - Auth Module
+"sign_in_label" = "Entrar";
+"sign_up_label" = "Registrarse";
+"existing_account_disclaimer" = "O si ya esta registrado";
+"name_placeholder" = "Nombre";
+"last_name_placeholder" = "Apellido";
+"email_placeholder" = "email";
+"password_placeholder" = "Contraseña";
+"password_confirmation_placeholder" = "Confirmar contraseña";
+"please_sign_up_label" = "Registro";
+"not_registered_disclaimer" = "O si no tienes una cuenta";
+"login_prompt_label" = "Entrar";
+// - Errors
+"password_mismatch_description" = "Las contraseñas no coinciden";
+"password_mismatch_reason" = "La confirmación de su contraseña no coincide";
+"empty_fields_description" = "Campos vacíos";
+"empty_fields_reason" = "Por favor llene todos los campos";
+"weak_password_description" = "Contraseña no segura";
+"password_guidelines" = "Su contraseña debe contener 8 caracteres, al menos una mayúscula y al menos un digito";
+
 // MARK: - Weekly Sessions Module
 "weekly_sessions_nav_bar_title" = "Sesiones disponibles";
 

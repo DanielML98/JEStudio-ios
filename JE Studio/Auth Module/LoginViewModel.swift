@@ -9,6 +9,15 @@ import Foundation
 import FirebaseAuth
 
 final class LoginViewModel: ObservableObject {
+  typealias Strings = AuthLocalizables
+  var signInLabel: String { Strings.signInLabel }
+  var signUpLabel: String { Strings.signUpLabel }
+  var passwordPlaceholder: String { Strings.passwordPlaceholder }
+  var emailPlaceholder: String { Strings.emailPlaceholder }
+  var notRegisteredPrompt: String { Strings.notRegisteredPrompt }
+  var loginPrompt: String { Strings.loginPrompt }
+
+  
   @Published var shouldShowAlert: Bool = false
   var error: SignInError = .somethingWentWrong
   

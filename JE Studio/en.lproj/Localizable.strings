@@ -12,6 +12,26 @@
 "payments_icon_label" = "Payments";
 "studios_label" = "Studios";
 
+// MARK: - Auth Module
+"sign_in_label" = "Sign In";
+"sign_up_label" = "Sign Up";
+"existing_account_disclaimer" = "Or if you already have an account";
+"name_placeholder" = "Name";
+"last_name_placeholder" = "Lastname";
+"email_placeholder" = "email";
+"password_placeholder" = "Password";
+"password_confirmation_placeholder" = "Confirm Password";
+"please_sign_up_label" = "Please sign up";
+"not_registered_disclaimer" = "Or if you don't have an account";
+"login_prompt_label" = "Please sign in";
+// - Errors
+"password_mismatch_description" = "Password mismatch";
+"password_mismatch_reason" = "Your passwords don't match";
+"empty_fields_description" = "Empty Fields";
+"empty_fields_reason" = "Please fill in missing fields";
+"weak_password_description" = "Password is not safe";
+"password_guidelines" = "Your password must be 8 characters long, contain a capital letter and a digit";
+
 // MARK: - Weekly Sessions Module
 "weekly_sessions_nav_bar_title" = "Available Sessions";
 
