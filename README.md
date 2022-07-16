@@ -20,5 +20,5 @@ Phones are tools that we carry with us all day long and in some cases they work 
 JE Studio app supports only portrait orientation since no media is displayed, for now the app can only be used in this orientation. Since this is just an MVP, future releases may include media of some type and then other orientations might be necessary
 
 ## Run the app
-The app uses Firebase's SDK throug Swift Package Manager, so in theory there are no other extra steps except for building a running the app. With this said, you may have to fetch the latest version of the dependencies, you can achieve this goint to the file tap in Xcode's menu, and following the next steps 
+The app uses Firebase's SDK through Swift Package Manager, so in theory there are no other extra steps except for building a running the app. With this said, you may have to fetch the latest version of the dependencies, you can achieve this by going to the file tab in Xcode's menu, and following the next steps:
 `File -> Packages -> Resolve Package versions`
