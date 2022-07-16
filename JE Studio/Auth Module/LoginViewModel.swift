@@ -9,23 +9,54 @@ import Foundation
 import FirebaseAuth
 
 final class LoginViewModel: ObservableObject {
+  @Published var shouldShowAlert: Bool = false
+  var error: SignInError = .somethingWentWrong
   
   func checkPassword(_ password: String) {
     
   }
   
   func checkCredentials(email: String, password: String, completion: @escaping  () -> Void) {
-    guard !email.isEmpty, !password.isEmpty else { return } //TODO: Tell the view to show empty alert
-    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-      if error == nil {
+    guard !email.isEmpty, !password.isEmpty
+    else {
+      showAlert(for: .emptyFields)
+      return }
+    AuthenticationManager.signIn(email: email, password: password) { result in
+      switch result {
+      case .success(_):
         completion()
-      } else {
-        print("❌\(error.debugDescription)")
+      case .failure(let error):
+        self.showAlert(for: .somethingWentWrong)
       }
     }
   }
   
-  func isNotEmpty() {
-    
+  func showAlert(for error: SignInError) {
+    self.error = error
+    shouldShowAlert.toggle()
   }
 }
+
+enum SignInError: Error, LocalizedError {
+  case somethingWentWrong
+  case emptyFields
+  
+  var errorDescription: String? {
+    switch self {
+    case .somethingWentWrong:
+      return "Something went wrong"
+    case .emptyFields:
+      return "Empty Fields"
+    }
+  }
+  /// A localized message describing the reason for the failure.
+  var failureReason: String? {
+    switch self {
+    case .somethingWentWrong:
+      return "Check your credentials or try again"
+    case .emptyFields:
+      return "Please fill in missing fields"
+    }
+  }
+}
+

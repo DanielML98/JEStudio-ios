@@ -61,6 +61,8 @@
 		3ECD731B28652B1000BF9FE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD731D28652B1000BF9FE2 /* Localizable.strings */; };
 		3ECD732028652C6700BF9FE2 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD731F28652C6700BF9FE2 /* String+Localizable.swift */; };
 		3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD732128652DFF00BF9FE2 /* TabBarLocalizables.swift */; };
+		3ED1FEF6288484C40088BA52 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FEF5288484C40088BA52 /* ProfileView.swift */; };
+		3ED1FEFA288492DB0088BA52 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FEF9288492DB0088BA52 /* SignUpViewModel.swift */; };
 		3EDDAB6A28766633003F175B /* BookLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDAB6928766633003F175B /* BookLocalizables.swift */; };
 		3EDDAB6E287669F4003F175B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDDAB6D287669F4003F175B /* GoogleService-Info.plist */; };
 		3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE27CF3284167B700BFC691 /* JE_StudioApp.swift */; };
@@ -126,6 +128,8 @@
 		3ECD731E28652B2B00BF9FE2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3ECD731F28652C6700BF9FE2 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		3ECD732128652DFF00BF9FE2 /* TabBarLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalizables.swift; sourceTree = "<group>"; };
+		3ED1FEF5288484C40088BA52 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3ED1FEF9288492DB0088BA52 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3EDDAB6928766633003F175B /* BookLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLocalizables.swift; sourceTree = "<group>"; };
 		3EDDAB6D287669F4003F175B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EE27CF0284167B700BFC691 /* JE Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JE Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +197,7 @@
 				3E3FD66028767C930012DB58 /* AuthLocalizables.swift */,
 				3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */,
 				3EA2606228790FA100528C04 /* SignUpView.swift */,
+				3ED1FEF9288492DB0088BA52 /* SignUpViewModel.swift */,
 			);
 			path = "Auth Module";
 			sourceTree = "<group>";
@@ -246,6 +251,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3ED1FEF4288484A50088BA52 /* Profile Module */ = {
+			isa = PBXGroup;
+			children = (
+				3ED1FEF5288484C40088BA52 /* ProfileView.swift */,
+			);
+			path = "Profile Module";
+			sourceTree = "<group>";
+		};
 		3EDDAB6C287668BB003F175B /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		3EE27CF2284167B700BFC691 /* JE Studio */ = {
 			isa = PBXGroup;
 			children = (
+				3ED1FEF4288484A50088BA52 /* Profile Module */,
 				3E1856D2287FCA3E005ED50B /* Bike Selection */,
 				3EEBB7C9287CF2CE005C1A9B /* UI Components */,
 				3E0EBB7A2877EF31008F681A /* Weekly Sessions Module */,
@@ -444,6 +458,7 @@
 			files = (
 				3E1856DC287FDC8F005ED50B /* BikeSelectionView.swift in Sources */,
 				3ECD732028652C6700BF9FE2 /* String+Localizable.swift in Sources */,
+				3ED1FEFA288492DB0088BA52 /* SignUpViewModel.swift in Sources */,
 				3EEBB7CB287CF2E5005C1A9B /* BikeGridView.swift in Sources */,
 				3EFBE10F2875453A004538D6 /* WeeklySessionsView.swift in Sources */,
 				3EE27CF6284167B700BFC691 /* ContentView.swift in Sources */,
@@ -458,6 +473,7 @@
 				3E1856D4287FCA7F005ED50B /* SessionInfoCell.swift in Sources */,
 				3EEBB7CF287D3913005C1A9B /* Bike.swift in Sources */,
 				3E1856DE287FDE42005ED50B /* BikeSelectionViewModel.swift in Sources */,
+				3ED1FEF6288484C40088BA52 /* ProfileView.swift in Sources */,
 				3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */,
 				3E7615642883D34D007B152F /* JEAlert.swift in Sources */,
 				3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */,

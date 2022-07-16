@@ -19,7 +19,7 @@ struct ContentView: View {
           Spacer()
           switch viewRouter.currentPage {
           case .profile:
-              Text("Profile")
+            ProfileView(isLoggedIn: self.$isLoggedIn)
           case .book:
               BookView(viewModel: BookViewModel())
           case .payments:
@@ -52,7 +52,7 @@ struct ContentView: View {
         }
       }
       .fullScreenCover(isPresented: $isLoggedIn) {
-        LoginView(viewModel: LoginViewModel())
+        LoginView(viewModel: LoginViewModel(), isLoggedIn: self.$isLoggedIn)
       }
     }
 }

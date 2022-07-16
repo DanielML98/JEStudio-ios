@@ -13,11 +13,12 @@ struct LoginView: View {
   @State var username: String = String()
   @State var password: String = String()
   @State var navigationAction: Int? = 0
+  @Binding var isLoggedIn: Bool
   var body: some View {
     NavigationView {
       ZStack {
         NavigationLink(tag: 1, selection: $navigationAction) {
-          SignUpView()
+          SignUpView(viewModel: SignUpViewModel(isLoggedIn: self.$isLoggedIn))
         } label: {
           EmptyView()
         }
@@ -39,17 +40,18 @@ struct LoginView: View {
           .padding()
           VStack {
             TextField("email", text: $username)
+              .autocapitalization(.none)
+              .disableAutocorrection(true)
               .textFieldStyle(.roundedBorder)
               .font(.jeHeader5)
               .foregroundColor(JEStudioColor.purple700)
               .padding(.bottom, 8)
-            TextField("Password", text: $password, onCommit: {
-              viewModel.checkPassword(password)
-            })
-            .textFieldStyle(.roundedBorder)
-            .foregroundColor(JEStudioColor.purple700)
-            .font(.jeHeader5)
-            .padding(.top, 8)
+            SecureField("Password", text: $password)
+              .textInputAutocapitalization(.never)
+              .textFieldStyle(.roundedBorder)
+              .foregroundColor(JEStudioColor.purple700)
+              .font(.jeHeader5)
+              .padding(.top, 8)
           }
           .padding(.horizontal, 8)
           Spacer()
@@ -65,13 +67,18 @@ struct LoginView: View {
           .font(.jeHeader5)
         }
       }
+      .alert(isPresented: $viewModel.shouldShowAlert, error: viewModel.error, actions: { _ in
+        EmptyView()
+      }) { error in
+        Text(error.failureReason ?? "")
+      }
       .navigationBarHidden(true)
     }
   }
 }
 
-struct LoginView_Previews: PreviewProvider {
-  static var previews: some View {
-    LoginView(viewModel: LoginViewModel())
-  }
-}
+//struct LoginView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    LoginView(viewModel: LoginViewModel(), isLoggedIn: Binding<false>)
+//  }
+//}
