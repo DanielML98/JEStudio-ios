@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BikeSelectionView: View {
-  
   @ObservedObject var viewModel: BikeSelectionViewModel
-  
+  @Binding var keepActive: Bool
+
   var body: some View {
     ScrollView {
       VStack {
@@ -36,13 +36,19 @@ struct BikeSelectionView: View {
         .cornerRadius(8)
         Spacer()
       }
+      .fullScreenCover(isPresented: $viewModel.shouldShowConfirmation,
+             content: {
+        ConfirmationView(date: viewModel.currentSession.getFormattedDate(),
+                         hour: viewModel.currentSession.hour,
+                         keepActive: self.$keepActive)
+      })
       .addJENavBar(with: String())
     }
   }
 }
 
-struct BikeSelectionView_Previews: PreviewProvider {
-  static var previews: some View {
-    BikeSelectionView(viewModel: BikeSelectionViewModel(session: Session(studio: "Moderna", coach: "Laura", date: "25/05/2022", hour: "9:00", participants: ["daniel": 3])))
-  }
-}
+//struct BikeSelectionView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    BikeSelectionView(viewModel: BikeSelectionViewModel(session: Session(studio: "Moderna", coach: "Laura", date: "25/05/2022", hour: "9:00", participants: ["daniel": 3])))
+//  }
+//}

@@ -10,8 +10,6 @@ import FirebaseAuth
 
 final class LoginViewModel: ObservableObject {
   
-  @Published var shouldShowWarning: Bool = false
-  
   func checkPassword(_ password: String) {
     
   }
@@ -27,17 +25,7 @@ final class LoginViewModel: ObservableObject {
     }
   }
   
-  func showPasswordGuidelines() {
-    shouldShowWarning.toggle()
-  }
-  
   func isNotEmpty() {
     
-  }
-}
-
-extension String {
-  func isNotEmpty() -> Bool {
-    !self.isEmpty
   }
 }

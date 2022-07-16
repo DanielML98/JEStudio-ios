@@ -31,6 +31,7 @@
 		3E3FD65F28767C480012DB58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD65E28767C480012DB58 /* LoginView.swift */; };
 		3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66028767C930012DB58 /* AuthLocalizables.swift */; };
 		3E3FD66328767E1C0012DB58 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */; };
+		3E76155C28834687007B152F /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76155B28834687007B152F /* ConfirmationView.swift */; };
 		3EA2606328790FA100528C04 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2606228790FA100528C04 /* SignUpView.swift */; };
 		3ECD72FE2864BD3F00BF9FE2 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */; };
 		3ECD72FF2864BD3F00BF9FE2 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */; };
@@ -89,6 +90,7 @@
 		3E3FD65E28767C480012DB58 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3E3FD66028767C930012DB58 /* AuthLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalizables.swift; sourceTree = "<group>"; };
 		3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3E76155B28834687007B152F /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		3EA2606228790FA100528C04 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				3EEBB7CA287CF2E5005C1A9B /* BikeGridView.swift */,
 				3EEBB7CC287D3093005C1A9B /* BikeGridViewModel.swift */,
+				3E76155B28834687007B152F /* ConfirmationView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				3ECD73122864DF0600BF9FE2 /* UIColorExtension.swift in Sources */,
 				3EEBB7CD287D3093005C1A9B /* BikeGridViewModel.swift in Sources */,
 				3E2410F0287B4CCC007A9ACD /* Session.swift in Sources */,
+				3E76155C28834687007B152F /* ConfirmationView.swift in Sources */,
 				3E1856D6287FD67B005ED50B /* WeeklySessionsLocalizables.swift in Sources */,
 				3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */,
 				3ECD73142865109200BF9FE2 /* ViewRouter.swift in Sources */,
@@ -610,7 +614,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,7 +645,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

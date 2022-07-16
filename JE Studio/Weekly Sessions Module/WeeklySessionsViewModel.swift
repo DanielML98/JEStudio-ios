@@ -10,7 +10,7 @@ import Foundation
 final class WeeklySessionsViewModel: ObservableObject {
 
   @Published var availableSessions: [Session] = []
-  var sessionSelected: Session = Session.emptySession()
+  @Published var sessionSelected: Session = Session.emptySession()
 
   init(for studio: SpinningStudio) {
     DataManager().getSessions(for: studio) { result in

@@ -11,15 +11,18 @@ struct BookView: View {
   @ObservedObject var viewModel: BookViewModel
   @State var selectedStudio: SpinningStudio = .universidad
   @State var navigationAction: Int? = 0
+  @State var goToSessions: Bool = false
   
     var body: some View {
       NavigationView {
         VStack (alignment: .leading) {
-          NavigationLink(tag: 1, selection: $navigationAction) {
-            WeeklySessionsView(viewModel: WeeklySessionsViewModel(for: selectedStudio))
+          NavigationLink(isActive: $goToSessions) {
+            WeeklySessionsView(viewModel: WeeklySessionsViewModel(for: selectedStudio),
+                               keepActive: self.$goToSessions)
           } label: {
             EmptyView()
           }
+          .isDetailLink(false)
           Text(viewModel.viewTitle)
             .foregroundColor(JEStudioColor.purple700)
             .font(.jeHeader2)
@@ -34,7 +37,7 @@ struct BookView: View {
             StudioCellView(studioName: studio.name, capacity: studio.capacity)
               .onTapGesture {
                 self.selectedStudio = studio.getStudio()
-                self.navigationAction = 1
+                self.goToSessions = true
               }
           }
           Spacer()

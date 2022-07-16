@@ -10,6 +10,8 @@ import Foundation
 final class BikeSelectionViewModel: ObservableObject {
   @Published var currentSession: Session
   @Published var selectedBikeNumber: Int = 0
+  @Published var shouldShowConfirmation = false
+  var operationStatus: OperationStatus = .none
   let dataManager: DataManager = DataManager()
   
   init(session: Session) {
@@ -24,7 +26,16 @@ final class BikeSelectionViewModel: ObservableObject {
 
   func bookPlaceIn() {
     updateParticipants()
-    dataManager.bookPlaceIn(session: currentSession, updatedParticipants: currentSession.participants)
+    dataManager.bookPlaceIn(session: currentSession, updatedParticipants: currentSession.participants) { [self] result in
+      switch result {
+      case .failure(let error):
+        print(error.localizedDescription)
+        operationStatus = .failure
+      case .success( _):
+        self.shouldShowConfirmation = true
+        operationStatus = .success
+      }
+    }
   }
 
   private func updateParticipants() {
@@ -37,4 +48,11 @@ extension BikeSelectionViewModel: BikeGridDelegate {
   func didSelectBike(number: Int) {
     selectedBikeNumber = number
   }
+}
+
+enum OperationStatus {
+  case loading
+  case success
+  case failure
+  case none
 }
