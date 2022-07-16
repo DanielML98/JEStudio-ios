@@ -11,8 +11,21 @@ final class WeeklySessionsViewModel: ObservableObject {
 
   @Published var availableSessions: [Session] = []
   @Published var sessionSelected: Session = Session.emptySession()
+  let studio: SpinningStudio
 
   init(for studio: SpinningStudio) {
+    self.studio = studio
+  }
+  
+  func getBikeSelectionModel() -> BikeSelectionViewModel {
+    BikeSelectionViewModel(session: sessionSelected)
+  }
+
+  func updateSelection(to session: Session) {
+    self.sessionSelected = session
+  }
+
+  func getSessions() {
     DataManager().getSessions(for: studio) { result in
       switch result {
       case .success(let sessions):
@@ -22,13 +35,5 @@ final class WeeklySessionsViewModel: ObservableObject {
         print("Error❌: \(error)")
       }
     }
-  }
-  
-  func getBikeSelectionModel() -> BikeSelectionViewModel {
-    BikeSelectionViewModel(session: sessionSelected)
-  }
-
-  func updateSelection(to session: Session) {
-    self.sessionSelected = session
   }
 }

@@ -33,6 +33,9 @@ struct WeeklySessionsView: View {
         }
       }
       .addJENavBar(with: localizables.navBarTitle)
+      .onAppear {
+        viewModel.getSessions()
+      }
     }
 }
 

@@ -32,6 +32,9 @@
 		3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66028767C930012DB58 /* AuthLocalizables.swift */; };
 		3E3FD66328767E1C0012DB58 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */; };
 		3E76155C28834687007B152F /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76155B28834687007B152F /* ConfirmationView.swift */; };
+		3E7615602883D018007B152F /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76155F2883D018007B152F /* CustomErrors.swift */; };
+		3E7615622883D17B007B152F /* ConnectionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7615612883D17B007B152F /* ConnectionValidator.swift */; };
+		3E7615642883D34D007B152F /* JEAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7615632883D34D007B152F /* JEAlert.swift */; };
 		3EA2606328790FA100528C04 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2606228790FA100528C04 /* SignUpView.swift */; };
 		3ECD72FE2864BD3F00BF9FE2 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */; };
 		3ECD72FF2864BD3F00BF9FE2 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */; };
@@ -91,6 +94,9 @@
 		3E3FD66028767C930012DB58 /* AuthLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalizables.swift; sourceTree = "<group>"; };
 		3E3FD66228767E1C0012DB58 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3E76155B28834687007B152F /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		3E76155F2883D018007B152F /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		3E7615612883D17B007B152F /* ConnectionValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionValidator.swift; sourceTree = "<group>"; };
+		3E7615632883D34D007B152F /* JEAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEAlert.swift; sourceTree = "<group>"; };
 		3EA2606228790FA100528C04 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -232,6 +238,8 @@
 				3EFBE105287503E1004538D6 /* FontExtension.swift */,
 				3E2410EB287A926C007A9ACD /* JENavigationBar.swift */,
 				3E1856DF287FEA56005ED50B /* HIdeViewsExtension.swift */,
+				3E76155F2883D018007B152F /* CustomErrors.swift */,
+				3E7615612883D17B007B152F /* ConnectionValidator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 				3EEBB7CA287CF2E5005C1A9B /* BikeGridView.swift */,
 				3EEBB7CC287D3093005C1A9B /* BikeGridViewModel.swift */,
 				3E76155B28834687007B152F /* ConfirmationView.swift */,
+				3E7615632883D34D007B152F /* JEAlert.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -446,10 +455,12 @@
 				3EEBB7CF287D3913005C1A9B /* Bike.swift in Sources */,
 				3E1856DE287FDE42005ED50B /* BikeSelectionViewModel.swift in Sources */,
 				3E3FD66128767C930012DB58 /* AuthLocalizables.swift in Sources */,
+				3E7615642883D34D007B152F /* JEAlert.swift in Sources */,
 				3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */,
 				3E2410F2287B6257007A9ACD /* WeeklySessionsViewModel.swift in Sources */,
 				3E2410EC287A926C007A9ACD /* JENavigationBar.swift in Sources */,
 				3E3FD66328767E1C0012DB58 /* LoginViewModel.swift in Sources */,
+				3E7615602883D018007B152F /* CustomErrors.swift in Sources */,
 				3EFBE106287503E1004538D6 /* FontExtension.swift in Sources */,
 				3E1856D8287FD86C005ED50B /* BikeSelectionLocalizables.swift in Sources */,
 				3EDDAB6A28766633003F175B /* BookLocalizables.swift in Sources */,
@@ -462,6 +473,7 @@
 				3E1856D6287FD67B005ED50B /* WeeklySessionsLocalizables.swift in Sources */,
 				3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */,
 				3ECD73142865109200BF9FE2 /* ViewRouter.swift in Sources */,
+				3E7615622883D17B007B152F /* ConnectionValidator.swift in Sources */,
 				3EFBE10828750983004538D6 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

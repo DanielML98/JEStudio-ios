@@ -12,6 +12,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
+    ConnectionValidator.shared.startMonitoring()
     return true
   }
 }
@@ -19,15 +20,27 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct JE_StudioApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+  @Environment(\.scenePhase) private var scenePhase
+  @State var stillHasInternetConnection: Bool = false
   var body: some Scene {
     WindowGroup {
-      //BikeGridView(viewModel: BikeGridViewModel(participants: ["Daniel":5, "daniel": 6, "daniel2": 7]))
-      ContentView(viewRouter: ViewRouter(), isLoggedIn: userIsLogged())
-      //LoginView(viewModel: LoginViewModel())
+        ContentView(viewRouter: ViewRouter(), isLoggedIn: userIsLogged())
+          .fullScreenCover(isPresented: $stillHasInternetConnection) {
+            JEAlert(title: CustomErrors.notConnectedToInternet.title, message: CustomErrors.notConnectedToInternet.message)
+          }
+    }
+    .onChange(of: scenePhase) { newValue in
+      if newValue == .active {
+        stillHasInternetConnection = !ConnectionValidator.shared.userHasConnection
+      }
     }
   }
   
   private func userIsLogged() -> Bool {
     return AuthenticationManager.getCurrentUser() != nil ? false : true
+  }
+  
+  private func userHasConnection() -> Bool {
+    ConnectionValidator.shared.userHasConnection
   }
 }
