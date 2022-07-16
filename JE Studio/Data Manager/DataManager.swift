@@ -19,7 +19,9 @@ class DataManager {
       do {
         let data =  try JSONSerialization.data(withJSONObject: sessions, options: .prettyPrinted)
         let sessionsDictionary = try JSONDecoder().decode([String:Session].self, from: data)
-        let sessionsArray: [Session] = sessionsDictionary.values.map { $0 }
+        let sessionsArray: [Session] = sessionsDictionary.values.map { $0 }.sorted { session1, session2 in
+          session1.id < session2.id
+        }
         completion(.success(sessionsArray))
       } catch {
         completion(.failure(error))

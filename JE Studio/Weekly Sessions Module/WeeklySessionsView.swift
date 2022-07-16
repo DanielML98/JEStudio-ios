@@ -22,14 +22,21 @@ struct WeeklySessionsView: View {
           EmptyView()
         }
         .isDetailLink(false)
-        ForEach(viewModel.availableSessions) { session in
-          WeeklySessionsCell(sessionHour: session.hour,
-                             date: session.getFormattedDate(),
-                             coach: session.coach)
-          .onTapGesture {
-            viewModel.updateSelection(to: session)
-            self.goToBikeSelection = true
+        switch viewModel.state {
+        case .loading:
+          ProgressView()
+        case .success:
+          ForEach(viewModel.availableSessions) { session in
+            WeeklySessionsCell(sessionHour: session.hour,
+                               date: session.getFormattedDate(),
+                               coach: session.coach)
+            .onTapGesture {
+              viewModel.updateSelection(to: session)
+              self.goToBikeSelection = true
+            }
           }
+        case .failure:
+          Text("Couldn't fetch the data")
         }
       }
       .addJENavBar(with: localizables.navBarTitle)

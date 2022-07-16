@@ -11,6 +11,7 @@ final class WeeklySessionsViewModel: ObservableObject {
 
   @Published var availableSessions: [Session] = []
   @Published var sessionSelected: Session = Session.emptySession()
+  @Published var state: CallState = .loading
   let studio: SpinningStudio
 
   init(for studio: SpinningStudio) {
@@ -29,11 +30,21 @@ final class WeeklySessionsViewModel: ObservableObject {
     DataManager().getSessions(for: studio) { result in
       switch result {
       case .success(let sessions):
-        self.availableSessions = sessions
-        print("From ViewModel➡️ \(self.availableSessions)")
-      case .failure(let error):
-        print("Error❌: \(error)")
+        DispatchQueue.main.async {
+          self.state = .success
+          self.availableSessions = sessions
+        }
+      case .failure(_):
+        DispatchQueue.main.async {
+          self.state = .failure
+        }
       }
     }
   }
+}
+
+enum CallState {
+  case loading
+  case success
+  case failure
 }

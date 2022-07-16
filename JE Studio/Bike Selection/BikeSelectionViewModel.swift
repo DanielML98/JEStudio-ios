@@ -9,6 +9,7 @@ import Foundation
 
 final class BikeSelectionViewModel: ObservableObject {
   @Published var currentSession: Session
+  @Published var alreadyBooked: Bool = false
   @Published var selectedBikeNumber: Int = 0
   @Published var shouldShowConfirmation = false
   var operationStatus: OperationStatus = .none
@@ -41,6 +42,13 @@ final class BikeSelectionViewModel: ObservableObject {
   private func updateParticipants() {
     guard let userId: String = AuthenticationManager.getUserId() else { return }
     currentSession.participants[userId] = selectedBikeNumber
+  }
+
+  func isDoubleBooking() {
+    let currentUser = AuthenticationManager.getUserId() ?? ""
+    if currentSession.participants.keys.contains(currentUser) {
+      self.alreadyBooked = true
+    }
   }
 }
 

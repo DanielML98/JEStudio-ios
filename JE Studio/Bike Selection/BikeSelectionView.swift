@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BikeSelectionView: View {
-  @ObservedObject var viewModel: BikeSelectionViewModel
+  @StateObject var viewModel: BikeSelectionViewModel
   @Binding var keepActive: Bool
 
   var body: some View {
@@ -38,11 +38,18 @@ struct BikeSelectionView: View {
       }
       .fullScreenCover(isPresented: $viewModel.shouldShowConfirmation,
              content: {
-        ConfirmationView(date: viewModel.currentSession.getFormattedDate(),
-                         hour: viewModel.currentSession.hour,
-                         keepActive: self.$keepActive)
+        ConfirmationView(keepActive: self.$keepActive,
+                         bookedSession: viewModel.currentSession)
       })
       .addJENavBar(with: String())
+    }
+    .onAppear {
+      viewModel.isDoubleBooking()
+    }
+    .alert("You already booked for this session", isPresented: $viewModel.alreadyBooked) {
+      Button("Ok") {
+        self.keepActive = false
+      }
     }
   }
 }

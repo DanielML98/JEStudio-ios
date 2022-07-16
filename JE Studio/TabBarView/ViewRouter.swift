@@ -14,6 +14,6 @@ enum Page {
 }
 
 class ViewRouter: ObservableObject {
-  @Published var currentPage: Page = .profile
+  @Published var currentPage: Page = .book
 }
 

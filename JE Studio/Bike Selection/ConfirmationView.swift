@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ConfirmationView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-  let date: String
-  let hour: String
+  @StateObject var viewModel: ConfirmationViewModel = ConfirmationViewModel()
   @Binding var keepActive: Bool
+  let bookedSession: Session
 
     var body: some View {
       ZStack {
@@ -22,7 +22,7 @@ struct ConfirmationView: View {
             Spacer()
             
             Button("Add to calendar") {
-              print("Add it to calendar")
+              viewModel.saveSessionToCalendar(date: bookedSession.date, startHour: bookedSession.hour)
             }
             .padding()
             .font(.jeSubtitle1)
@@ -34,14 +34,14 @@ struct ConfirmationView: View {
               .foregroundColor(.white)
               .frame(maxWidth: .infinity)
               .padding(8)
-            Text(date)
+            Text(bookedSession.getFormattedDate())
               .font(.jeHeader5)
               .foregroundColor(.white)
               .lineLimit(1)
             Text("at")
               .font(.jeHeader4)
               .foregroundColor(.white)
-            Text(hour)
+            Text(bookedSession.hour)
               .font(.jeHeader5)
               .foregroundColor(.white)
             Text("has been booked")
@@ -67,6 +67,12 @@ struct ConfirmationView: View {
           }
         }
       }
+      .alert("Success", isPresented: $viewModel.successfullyAddedToCalendar) {
+        Text("Ok")
+      } message: {
+        Text("Successfully added to calendar")
+      }
+
     }
 }
 

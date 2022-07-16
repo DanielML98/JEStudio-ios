@@ -63,6 +63,8 @@
 		3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD732128652DFF00BF9FE2 /* TabBarLocalizables.swift */; };
 		3ED1FEF6288484C40088BA52 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FEF5288484C40088BA52 /* ProfileView.swift */; };
 		3ED1FEFA288492DB0088BA52 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FEF9288492DB0088BA52 /* SignUpViewModel.swift */; };
+		3ED1FF002885084B0088BA52 /* ConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FEFF2885084B0088BA52 /* ConfirmationViewModel.swift */; };
+		3ED1FF0228850B890088BA52 /* CalendarEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1FF0128850B890088BA52 /* CalendarEventManager.swift */; };
 		3EDDAB6A28766633003F175B /* BookLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDAB6928766633003F175B /* BookLocalizables.swift */; };
 		3EDDAB6E287669F4003F175B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EDDAB6D287669F4003F175B /* GoogleService-Info.plist */; };
 		3EE27CF4284167B700BFC691 /* JE_StudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE27CF3284167B700BFC691 /* JE_StudioApp.swift */; };
@@ -130,6 +132,8 @@
 		3ECD732128652DFF00BF9FE2 /* TabBarLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocalizables.swift; sourceTree = "<group>"; };
 		3ED1FEF5288484C40088BA52 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3ED1FEF9288492DB0088BA52 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		3ED1FEFF2885084B0088BA52 /* ConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewModel.swift; sourceTree = "<group>"; };
+		3ED1FF0128850B890088BA52 /* CalendarEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventManager.swift; sourceTree = "<group>"; };
 		3EDDAB6928766633003F175B /* BookLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLocalizables.swift; sourceTree = "<group>"; };
 		3EDDAB6D287669F4003F175B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EE27CF0284167B700BFC691 /* JE Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JE Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,8 @@
 				3E1856D7287FD86C005ED50B /* BikeSelectionLocalizables.swift */,
 				3E1856DB287FDC8F005ED50B /* BikeSelectionView.swift */,
 				3E1856DD287FDE42005ED50B /* BikeSelectionViewModel.swift */,
+				3E76155B28834687007B152F /* ConfirmationView.swift */,
+				3ED1FEFF2885084B0088BA52 /* ConfirmationViewModel.swift */,
 			);
 			path = "Bike Selection";
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				3ECD731D28652B1000BF9FE2 /* Localizable.strings */,
 				3E037D912881324500FB30D5 /* AuthenticationManager.swift */,
 				3E7615652883F3A8007B152F /* Launch Screen.storyboard */,
+				3ED1FF0128850B890088BA52 /* CalendarEventManager.swift */,
 			);
 			path = "JE Studio";
 			sourceTree = "<group>";
@@ -323,7 +330,6 @@
 			children = (
 				3EEBB7CA287CF2E5005C1A9B /* BikeGridView.swift */,
 				3EEBB7CC287D3093005C1A9B /* BikeGridViewModel.swift */,
-				3E76155B28834687007B152F /* ConfirmationView.swift */,
 				3E7615632883D34D007B152F /* JEAlert.swift */,
 			);
 			path = "UI Components";
@@ -464,6 +470,7 @@
 				3EE27CF6284167B700BFC691 /* ContentView.swift in Sources */,
 				3E3FD65F28767C480012DB58 /* LoginView.swift in Sources */,
 				3EFBE1042874FF50004538D6 /* StudioCellView.swift in Sources */,
+				3ED1FF0228850B890088BA52 /* CalendarEventManager.swift in Sources */,
 				3EA2606328790FA100528C04 /* SignUpView.swift in Sources */,
 				3ECD7316286526D900BF9FE2 /* JEConstants.swift in Sources */,
 				3ECD732228652DFF00BF9FE2 /* TabBarLocalizables.swift in Sources */,
@@ -491,6 +498,7 @@
 				3E2410F0287B4CCC007A9ACD /* Session.swift in Sources */,
 				3E76155C28834687007B152F /* ConfirmationView.swift in Sources */,
 				3E1856D6287FD67B005ED50B /* WeeklySessionsLocalizables.swift in Sources */,
+				3ED1FF002885084B0088BA52 /* ConfirmationViewModel.swift in Sources */,
 				3EFBE10B28750C1A004538D6 /* Studio.swift in Sources */,
 				3ECD73142865109200BF9FE2 /* ViewRouter.swift in Sources */,
 				3E7615622883D17B007B152F /* ConnectionValidator.swift in Sources */,
@@ -641,6 +649,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "JE-Studio-Info.plist";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "JE Studio can help you remeber your class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
@@ -672,6 +681,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "JE-Studio-Info.plist";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "JE Studio can help you remeber your class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
