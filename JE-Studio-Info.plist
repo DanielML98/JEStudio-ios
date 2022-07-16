@@ -23,5 +23,7 @@
 		<string>Montserrat-BlackItalic.ttf</string>
 		<string>Montserrat-Black.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
 </dict>
 </plist>

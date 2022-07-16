@@ -35,6 +35,7 @@
 		3E7615602883D018007B152F /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76155F2883D018007B152F /* CustomErrors.swift */; };
 		3E7615622883D17B007B152F /* ConnectionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7615612883D17B007B152F /* ConnectionValidator.swift */; };
 		3E7615642883D34D007B152F /* JEAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7615632883D34D007B152F /* JEAlert.swift */; };
+		3E7615662883F3A8007B152F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7615652883F3A8007B152F /* Launch Screen.storyboard */; };
 		3EA2606328790FA100528C04 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2606228790FA100528C04 /* SignUpView.swift */; };
 		3ECD72FE2864BD3F00BF9FE2 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */; };
 		3ECD72FF2864BD3F00BF9FE2 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */; };
@@ -97,6 +98,7 @@
 		3E76155F2883D018007B152F /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		3E7615612883D17B007B152F /* ConnectionValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionValidator.swift; sourceTree = "<group>"; };
 		3E7615632883D34D007B152F /* JEAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEAlert.swift; sourceTree = "<group>"; };
+		3E7615652883F3A8007B152F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3EA2606228790FA100528C04 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3ECD72EC2864BD3E00BF9FE2 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3ECD72ED2864BD3E00BF9FE2 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				3EE27CF9284167B700BFC691 /* Preview Content */,
 				3ECD731D28652B1000BF9FE2 /* Localizable.strings */,
 				3E037D912881324500FB30D5 /* AuthenticationManager.swift */,
+				3E7615652883F3A8007B152F /* Launch Screen.storyboard */,
 			);
 			path = "JE Studio";
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				3EE27CF8284167B700BFC691 /* Assets.xcassets in Resources */,
 				3EDDAB6E287669F4003F175B /* GoogleService-Info.plist in Resources */,
 				3ECD730B2864BD3F00BF9FE2 /* Montserrat-SemiBold.ttf in Resources */,
+				3E7615662883F3A8007B152F /* Launch Screen.storyboard in Resources */,
 				3ECD730A2864BD3F00BF9FE2 /* Montserrat-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,7 +627,7 @@
 				INFOPLIST_FILE = "JE-Studio-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -654,7 +658,7 @@
 				INFOPLIST_FILE = "JE-Studio-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
