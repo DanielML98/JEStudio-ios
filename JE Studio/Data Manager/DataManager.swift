@@ -33,12 +33,9 @@ class DataManager {
     database.child(session.studio).child(session.id).child("participants").setValue(updatedParticipants) { error, data in
       guard error == nil
       else {
-        print("❌Error: \(String(describing: error))")
         completion(.failure(error!)) // Used force unwrapping since line 32 already checks that an error exists, inside this else there's always an error
         return
       }
-      print("✅Successfully booked \(session.id) \(updatedParticipants)")
-      print("\(data.url)")
       completion(.success(data.url))
     }
   }

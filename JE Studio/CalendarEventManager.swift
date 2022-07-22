@@ -14,28 +14,24 @@ final class CalendarEventManager {
     let eventStore : EKEventStore = EKEventStore()
     eventStore.requestAccess(to: .event) { (granted, error) in
       
-      if (granted) && (error == nil) {
-        print("granted \(granted)")
-        print("error \(error)")
+      if granted && (error == nil) {
         
         let event:EKEvent = EKEvent(eventStore: eventStore)
         
-        event.title = "JE Spinning Studio session"
+        event.title = "event_title".jeLocalized
         event.startDate = date
         event.endDate = event.startDate.addingTimeInterval(60*60)
-        event.notes = "Remember to stay hydrated and pay your class"
+        event.notes = "event_notes".jeLocalized
         event.addAlarm(EKAlarm(absoluteDate: date))
         event.calendar = eventStore.defaultCalendarForNewEvents
         do {
           try eventStore.save(event, span: .thisEvent)
         } catch let error as NSError {
-          print("failed to save event with error : \(error)")
           completion(.failure(error))
         }
         completion(.success(String()))
       }
       else{
-        print("failed to save event with error : \(error) or access not granted")
         completion(.failure(error!))
       }
     }

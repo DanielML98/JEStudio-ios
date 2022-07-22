@@ -21,7 +21,7 @@ struct ConfirmationView: View {
           HStack {
             Spacer()
             
-            Button("Add to calendar") {
+            Button("add_to_calendar_label".jeLocalized) {
               viewModel.saveSessionToCalendar(date: bookedSession.date, startHour: bookedSession.hour)
             }
             .padding()
@@ -29,7 +29,7 @@ struct ConfirmationView: View {
             .foregroundColor(JEStudioColor.purple100)
           }
           VStack(spacing: 40) {
-            Text("Your session on:")
+            Text("session_on_label".jeLocalized)
               .font(.jeHeader4)
               .foregroundColor(.white)
               .frame(maxWidth: .infinity)
@@ -38,13 +38,13 @@ struct ConfirmationView: View {
               .font(.jeHeader5)
               .foregroundColor(.white)
               .lineLimit(1)
-            Text("at")
+            Text("at_label".jeLocalized)
               .font(.jeHeader4)
               .foregroundColor(.white)
             Text(bookedSession.hour)
               .font(.jeHeader5)
               .foregroundColor(.white)
-            Text("has been booked")
+            Text("has_been_booked".jeLocalized)
               .font(.jeHeader5)
               .foregroundColor(.white)
             Image(systemName: "checkmark")
@@ -55,7 +55,7 @@ struct ConfirmationView: View {
           }
           Spacer()
           HStack {
-            Button("Listo") {
+            Button("ready_button".jeLocalized) {
               presentationMode.wrappedValue.dismiss()
               self.keepActive = false
             }
@@ -67,10 +67,10 @@ struct ConfirmationView: View {
           }
         }
       }
-      .alert("Success", isPresented: $viewModel.successfullyAddedToCalendar) {
+      .alert("done_label".jeLocalized, isPresented: $viewModel.successfullyAddedToCalendar) {
         Text("Ok")
       } message: {
-        Text("Successfully added to calendar")
+        Text("success_added_to_calendar".jeLocalized)
       }
 
     }

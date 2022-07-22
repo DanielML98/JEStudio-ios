@@ -7,14 +7,9 @@
 
 import Foundation
 
-final class BookViewModel: BookViewModelProtocol, ObservableObject {
-  var studios: [Studio] = [Studio(name: "Universidad", capacity: "7"), Studio(name: "Moderna", capacity: "10")]
+final class BookViewModel: ObservableObject {
+  var studios: [Studio] = [Studio(name: BookLocalizables.universidadStudioLabel, capacity: BookLocalizables.commonCapacity),
+                           Studio(name: BookLocalizables.modernaStudioLable, capacity: BookLocalizables.commonCapacity)]
   var viewTitle: String { return BookLocalizables.viewTitle }
-  func goToAvailableSessions(studio: Studio) {
-    
-  }
 }
 
-protocol BookViewModelProtocol {
-  
-}

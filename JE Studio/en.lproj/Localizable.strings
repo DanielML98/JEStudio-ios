@@ -10,7 +10,11 @@
 "profile_icon_label" = "Profile";
 "book_icon_label" = "Book";
 "payments_icon_label" = "Payments";
+// MARK: - Book Module
 "studios_label" = "Studios";
+"studios_capacity" = "8";
+"universidad_studio" = "Universidad";
+"moderna_studio" = "Moderna";
 
 // MARK: - Auth Module
 "sign_in_label" = "Sign In";
@@ -41,3 +45,17 @@
 // MARK: - Bike Selection Module
 "choose_your_bike_label" = "Choose your bike";
 "confirm_button_label" = "Confirm";
+
+// MARK: - Calendar Texts
+"event_title" = "JE Spinning Studio session";
+"event_notes" = "Remember to stay hydrated and bring a towel";
+
+// MARK: - Confirmation Texts
+"ok_button" = "Ok";
+"add_to_calendar_label" = "Add to calendar";
+"session_on_label" = "Your session on:";
+"at_label" = "at";
+"has_been_booked" = "has been booked";
+"ready_button" = "Ready";
+"done_label" = "Done";
+"success_added_to_calendar" = "Session successfully added to calendar";
